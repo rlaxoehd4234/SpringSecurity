@@ -62,6 +62,11 @@ public class SecurityConfig  {
                 .userDetailsService(userDetailsService)
                 ;
 
+        http
+                .sessionManagement()
+                .maximumSessions(1)
+                ;
+
 
 
         return http.build();
